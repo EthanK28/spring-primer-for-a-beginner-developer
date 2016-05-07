@@ -1,26 +1,25 @@
 package spring;
 
 public class MemberInfoPrinter {
+
 	private MemberDao memDao;
 	private MemberPrinter printer;
-	
+
 	public void setMemberDao(MemberDao memberDao) {
 		this.memDao = memberDao;
 	}
-	
+
 	public void setPrinter(MemberPrinter printer) {
 		this.printer = printer;
 	}
-	
+
 	public void printMemberInfo(String email) {
 		Member member = memDao.selectByEmail(email);
 		if (member == null) {
-			System.out.print("µ¥ÀÌÅÍ ¾øÀ½\n");
+			System.out.println("ë°ì´í„° ì—†ìŒ\n");
 			return;
 		}
-		
 		printer.print(member);
 		System.out.println();
-		
 	}
 }

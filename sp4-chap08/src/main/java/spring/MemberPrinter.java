@@ -1,9 +1,12 @@
 package spring;
 
 public class MemberPrinter {
-	
+
 	public void print(Member member) {
-		System.out.printf("È¸¿ø Á¤º¸: ¾ÆÀÌµğ=%d , ÀÌ¸ŞÀÏ=%s, ÀÌ¸§=%s, µî·ÏÀÏ=%tF\n", 
-				member.getId(), member.getEmail(), member.getName(), member.getRegisterDate());
+		System.out.printf(
+				"íšŒì› ì •ë³´: ì•„ì´ë””=%d, ì´ë©”ì¼=%s, ì´ë¦„=%s, ë“±ë¡ì¼=%tF\n",
+				member.getId(), member.getEmail(),
+				member.getName(), member.getRegisterDate());
 	}
+
 }
